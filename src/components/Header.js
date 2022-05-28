@@ -47,9 +47,9 @@ function Header() {
                 ) : null}
               </Nav.Link>
             </Nav.Item>
-            <Nav.Item className="textarea">
-              {token ? (
-                <>
+            {token ? (
+              <>
+                <Nav.Item className="textarea">
                   <Nav.Link
                     className="text-white shadow-none"
                     onClick={() => {
@@ -59,24 +59,24 @@ function Header() {
                     Logout&nbsp;
                     <LogoutIcon />
                   </Nav.Link>
-                </>
-              ) : (
-                <>
-                  <Nav.Item href="/login" className="text-white ">
-                    <LoginIcon />
-                    &nbsp;Login
-                  </Nav.Item>
-                </>
-              )}
-            </Nav.Item>
-            <Nav.Item className="textarea">
-              <Nav.Link
-                onClick={() => navigate("/signup")}
-                className="text-white"
-              >
-                SignUp
-              </Nav.Link>
-            </Nav.Item>
+                </Nav.Item>
+              </>
+            ) : (
+              <>
+                <Nav.Item href="/login" className="text-white ">
+                  <LoginIcon />
+                  &nbsp;Login
+                </Nav.Item>
+                <Nav.Item className="textarea">
+                  <Nav.Link
+                    onClick={() => navigate("/signup")}
+                    className="text-white"
+                  >
+                    SignUp
+                  </Nav.Link>
+                </Nav.Item>
+              </>
+            )}
           </Nav>
         </Navbar.Collapse>
       </Navbar>
