@@ -109,7 +109,7 @@ function SmartWatches() {
                               context.cart[print]["qty"] += 1;
                             }
                           } else {
-                            alert("Please Select a Inch");
+                            alert("Please Select a Watch color");
                           }
                         }}
                       >
