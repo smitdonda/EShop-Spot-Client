@@ -4,11 +4,11 @@ import StarIcon from "@mui/icons-material/Star";
 import Header from "../Header";
 import axios from "axios";
 import { Button } from "react-bootstrap";
-import { MyproductsContext } from "../../App";
+import { EshopSpotContext } from "../../App";
 
 function SmartTv() {
   let { id } = useParams();
-  let context = useContext(MyproductsContext);
+  let context = useContext(EshopSpotContext);
 
   //all images
   let [images, setImages] = useState([]);

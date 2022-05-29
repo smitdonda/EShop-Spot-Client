@@ -1,13 +1,13 @@
 import React, { useContext } from "react";
 import { Nav, Navbar } from "react-bootstrap";
 import ShoppingBasketIcon from "@mui/icons-material/ShoppingBasket";
-import { MyproductsContext } from "../App";
+import { EshopSpotContext } from "../App";
 import { useNavigate } from "react-router-dom";
 import LoginIcon from "@mui/icons-material/Login";
 import LogoutIcon from "@mui/icons-material/Logout";
 
 function Header() {
-  let context = useContext(MyproductsContext);
+  let context = useContext(EshopSpotContext);
   let navigate = useNavigate();
 
   // logOut
@@ -24,7 +24,7 @@ function Header() {
           className="text-white headingarea text-wrap"
           onClick={() => navigate("/")}
         >
-          <h2 className="name">My Products</h2>
+          <h2 className="name">Eshop Spot</h2>
         </Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">

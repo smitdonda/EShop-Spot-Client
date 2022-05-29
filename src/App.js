@@ -13,7 +13,8 @@ import ProductsBrand from "./components/ProductsBrand"
 import Signup from "./components/Signup";
 import Login from "./components/Login";
 
-export const MyproductsContext = React.createContext();
+
+export const EshopSpotContext = React.createContext();
 
 function App() {
   let [cart, setCart] = useState([]);
@@ -23,7 +24,7 @@ function App() {
   return (
     <div>
       <BrowserRouter>
-        <MyproductsContext.Provider
+        <EshopSpotContext.Provider
           value={{
             cart,
             setCart,
@@ -49,7 +50,7 @@ function App() {
             <Route path="/login" element={<Login />} />
             <Route path="/" element={<Home />} />
           </Routes>
-        </MyproductsContext.Provider>
+        </EshopSpotContext.Provider>
       </BrowserRouter>
     </div>
   );

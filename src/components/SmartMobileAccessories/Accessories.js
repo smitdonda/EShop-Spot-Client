@@ -1,14 +1,14 @@
 import React, { useState, useEffect, useContext } from "react";
 import { useParams } from "react-router-dom";
 import StarIcon from "@mui/icons-material/Star";
-import { MyproductsContext } from "../../App";
+import { EshopSpotContext } from "../../App";
 import { Button } from "react-bootstrap";
 import Header from "../Header";
 import axios from "axios";
 
 function Accessories() {
   let { id } = useParams();
-  let context = useContext(MyproductsContext);
+  let context = useContext(EshopSpotContext);
   const [isLoading, setIsLoading] = useState(true);
 
   // images

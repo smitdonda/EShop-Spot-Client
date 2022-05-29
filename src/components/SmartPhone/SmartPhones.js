@@ -1,6 +1,6 @@
 import React, { useContext, useState, useEffect } from "react";
 import StarIcon from "@mui/icons-material/Star";
-import { MyproductsContext } from "../../App";
+import { EshopSpotContext } from "../../App";
 import { useParams } from "react-router-dom";
 import Header from "../Header";
 import axios from "axios";
@@ -8,7 +8,7 @@ import { Button } from "react-bootstrap";
 
 function SmartPhones() {
   let { id } = useParams();
-  let context = useContext(MyproductsContext);
+  let context = useContext(EshopSpotContext);
 
   let [seletedProducts, setSeletedtProducts] = useState();
   const [isLoading, setIsLoading] = useState(true);

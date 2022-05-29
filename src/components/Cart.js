@@ -1,5 +1,5 @@
 import React, { useContext, useState } from "react";
-import { MyproductsContext } from "../App";
+import { EshopSpotContext } from "../App";
 import { Link } from "react-router-dom";
 import StarIcon from "@mui/icons-material/Star";
 import AddIcon from "@mui/icons-material/Add";
@@ -10,7 +10,7 @@ import ClearIcon from "@mui/icons-material/Clear";
 import PaymentMethod from "./PaymentMethod";
 
 function Cart() {
-  let context = useContext(MyproductsContext);
+  let context = useContext(EshopSpotContext);
   let cartPrice = 0;
 
   let handleDelete = (e) => {

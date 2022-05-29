@@ -1,5 +1,5 @@
 import React, { useContext, useState, useEffect } from "react";
-import { MyproductsContext } from "../../App";
+import { EshopSpotContext } from "../../App";
 import { useParams } from "react-router-dom";
 import StarIcon from "@mui/icons-material/Star";
 import Header from "../Header";
@@ -7,7 +7,7 @@ import axios from "axios";
 
 function TrueWirelessStereoBuds() {
   let { id } = useParams();
-  let context = useContext(MyproductsContext);
+  let context = useContext(EshopSpotContext);
 
   let [seletedProducts, setSeletedtProducts] = useState();
   const [isLoading, setIsLoading] = useState(true);
