@@ -37,9 +37,6 @@ function PaymentMethod() {
             countryCode: "US",
           },
         }}
-        onLoadPaymentData={(paymentRequest) => {
-          console.log("load payment data", paymentRequest);
-        }}
       />
     </div>
   );
