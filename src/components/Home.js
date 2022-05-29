@@ -14,7 +14,7 @@ function Home() {
   let [smartMobileBrandName, setSmartMobileBrandName] = useState();
   let mobileData = async () => {
     let res = await axios.get(
-      "https://my-products75.herokuapp.com/users/getsmartmobile"
+      "https://eshop-spot75.herokuapp.com/users/getsmartmobile"
     );
     setMobile(res.data.products);
     setSmartMobileBrandName(res.data.products[0].brandname);
@@ -25,7 +25,7 @@ function Home() {
   let [tvBrandName, setTvBrandName] = useState();
   let tvData = async () => {
     let res = await axios.get(
-      "https://my-products75.herokuapp.com/users/getsmarttv"
+      "https://eshop-spot75.herokuapp.com/users/getsmarttv"
     );
     setTv(res.data.products);
     setTvBrandName(res.data.products[0].brandname);
@@ -36,7 +36,7 @@ function Home() {
   let [twsBrandName, setTwsBrandName] = useState();
   let twsData = async () => {
     let res = await axios.get(
-      "https://my-products75.herokuapp.com/users/gettws"
+      "https://eshop-spot75.herokuapp.com/users/gettws"
     );
     setTws(res.data.products);
     setTwsBrandName(res?.data?.products[0]?.brandname);
@@ -47,7 +47,7 @@ function Home() {
   let [watchBrand, setWatchBrandName] = useState();
   let smartWatchData = async () => {
     let res = await axios.get(
-      "https://my-products75.herokuapp.com/users/getwatch"
+      "https://eshop-spot75.herokuapp.com/users/getwatch"
     );
     setWatch(res.data.products);
     setWatchBrandName(res?.data?.products[0]?.brandname);
@@ -58,14 +58,12 @@ function Home() {
   let [acBrandName, setAcBrandName] = useState();
   let accessoriesData = async () => {
     let res = await axios.get(
-      "https://my-products75.herokuapp.com/users/getaccessories"
+      "https://eshop-spot75.herokuapp.com/users/getaccessories"
     );
     setAccessories(res.data.products);
     setAcBrandName(res?.data?.products[0]?.brandname);
     setIsLoading(false);
   };
-
-
 
   // check token or not (authentication)
   let chackAuth = async () => {
@@ -77,7 +75,7 @@ function Home() {
         },
       };
       let res = await axios.post(
-        "https://my-products75.herokuapp.com/users/auth",
+        "https://eshop-spot75.herokuapp.com/users/auth",
         { purpose: "vaildate access" },
         config
       );
@@ -98,8 +96,6 @@ function Home() {
     accessoriesData();
     chackAuth();
   }, []);
-
-  
 
   return (
     <>

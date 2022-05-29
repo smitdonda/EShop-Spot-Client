@@ -8,7 +8,10 @@ function SignUp() {
   let navigate = useNavigate();
 
   let handleSubmit = async (values) => {
-    let res = await axios.post("https://my-products75.herokuapp.com/users/signup", values);
+    let res = await axios.post(
+      "https://eshop-spot75.herokuapp.com/users/signup",
+      values
+    );
     if (res.data.statusCode === 200) {
       navigate("/login");
     }

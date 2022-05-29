@@ -12,7 +12,7 @@ function ProductsBrand() {
 
   let brandNameData = async () => {
     let res = await axios.get(
-      "https://my-products75.herokuapp.com/users/getProductkeybrand/" + id
+      "https://eshop-spot75.herokuapp.com/users/getProductkeybrand/" + id
     );
     setCategoryName(res.data.products);
     setBrandName(res?.data?.products[0]?.brandname);
@@ -41,7 +41,10 @@ function ProductsBrand() {
             <hr />
             {categoryName?.map((e, i) => {
               return (
-                <div key={i} className="view-products-warp mt-5 p-3 bg-light textarea ">
+                <div
+                  key={i}
+                  className="view-products-warp mt-5 p-3 bg-light textarea "
+                >
                   <div className="text-center">
                     <Link to={`/` + e.keybrandname + "/" + e.keyname}>
                       <img

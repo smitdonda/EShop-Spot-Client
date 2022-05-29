@@ -18,7 +18,7 @@ function SmartTv() {
 
   let productData = async () => {
     let res = await axios.get(
-      "https://my-products75.herokuapp.com/users/getProductKeyName/" + id
+      "https://eshop-spot75.herokuapp.com/users/getProductKeyName/" + id
     );
     if (res) {
       setSeletedtProducts(res.data.products);

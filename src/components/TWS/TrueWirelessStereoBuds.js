@@ -14,7 +14,7 @@ function TrueWirelessStereoBuds() {
 
   let productData = async () => {
     let res = await axios.get(
-      "https://my-products75.herokuapp.com/users/getProductKeyName/" + id
+      "https://eshop-spot75.herokuapp.com/users/getProductKeyName/" + id
     );
     setSeletedtProducts(res?.data?.products);
     setImages(res?.data?.products[0]?.variant[0]?.images);
@@ -23,7 +23,7 @@ function TrueWirelessStereoBuds() {
   };
   useEffect(() => {
     productData();
-  },[]);
+  }, []);
 
   let [images, setImages] = useState([]);
   let [changeimg, setChangeImg] = useState();
