@@ -8,7 +8,10 @@ function Login() {
   let navigate = useNavigate();
 
   let handleSubmit = async (values) => {
-    let res = await axios.post("https://my-products75.herokuapp.com/users/login", values);
+    let res = await axios.post(
+      "https://my-products75.herokuapp.com/users/login",
+      values
+    );
     if (res.data.statusCode === 200) {
       sessionStorage.setItem("token", res.data.token);
       sessionStorage.setItem("username", res.data.username);
@@ -96,9 +99,9 @@ function Login() {
           >
             Have New account? Sign Up
           </a>
-          <p className="d-block text-center text-bold mt-2 text-muted ">
-            Email&nbsp;:&nbsp;user@gmail.com
-            Password&nbsp;:&nbsp;User@123
+          <h6 className="text-bold mt-2 text-muted ">Demo Credentials</h6>
+          <p className="text-bold mt-2 text-muted ">
+            Email&nbsp;:&nbsp;user@gmail.com Password&nbsp;:&nbsp;User@123
           </p>
         </form>
       </div>
