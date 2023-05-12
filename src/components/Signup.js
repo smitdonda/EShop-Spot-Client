@@ -9,7 +9,7 @@ function SignUp() {
 
   let handleSubmit = async (values) => {
     let res = await axios.post(
-      "https://eshop-spot75.herokuapp.com/users/signup",
+      "https://e-shop-spot.vercel.app/users/signup",
       values
     );
     if (res.data.statusCode === 200) {

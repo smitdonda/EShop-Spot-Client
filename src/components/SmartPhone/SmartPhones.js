@@ -15,7 +15,7 @@ function SmartPhones() {
 
   let productData = async () => {
     let res = await axios.get(
-      "https://eshop-spot75.herokuapp.com/users/getProductKeyName/" + id
+      "https://e-shop-spot.vercel.app/users/getProductKeyName/" + id
     );
     if (res) {
       setSeletedtProducts(res.data.products);

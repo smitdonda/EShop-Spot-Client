@@ -12,7 +12,7 @@ function ProductsBrand() {
 
   let brandNameData = async () => {
     let res = await axios.get(
-      "https://eshop-spot75.herokuapp.com/users/getProductkeybrand/" + id
+      "https://e-shop-spot.vercel.app/users/getProductkeybrand/" + id
     );
     setCategoryName(res.data.products);
     setBrandName(res?.data?.products[0]?.brandname);

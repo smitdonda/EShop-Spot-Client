@@ -14,7 +14,7 @@ function Home() {
   let [smartMobileBrandName, setSmartMobileBrandName] = useState();
   let mobileData = async () => {
     let res = await axios.get(
-      "https://eshop-spot75.herokuapp.com/users/getsmartmobile"
+      "https://e-shop-spot.vercel.app/users/getsmartmobile"
     );
     setMobile(res.data.products);
     setSmartMobileBrandName(res.data.products[0].brandname);
@@ -25,7 +25,7 @@ function Home() {
   let [tvBrandName, setTvBrandName] = useState();
   let tvData = async () => {
     let res = await axios.get(
-      "https://eshop-spot75.herokuapp.com/users/getsmarttv"
+      "https://e-shop-spot.vercel.app/users/getsmarttv"
     );
     setTv(res.data.products);
     setTvBrandName(res.data.products[0].brandname);
@@ -35,9 +35,7 @@ function Home() {
   let [tws, setTws] = useState();
   let [twsBrandName, setTwsBrandName] = useState();
   let twsData = async () => {
-    let res = await axios.get(
-      "https://eshop-spot75.herokuapp.com/users/gettws"
-    );
+    let res = await axios.get("https://e-shop-spot.vercel.app/users/gettws");
     setTws(res.data.products);
     setTwsBrandName(res?.data?.products[0]?.brandname);
     setIsLoading(false);
@@ -46,9 +44,7 @@ function Home() {
   let [watch, setWatch] = useState();
   let [watchBrand, setWatchBrandName] = useState();
   let smartWatchData = async () => {
-    let res = await axios.get(
-      "https://eshop-spot75.herokuapp.com/users/getwatch"
-    );
+    let res = await axios.get("https://e-shop-spot.vercel.app/users/getwatch");
     setWatch(res.data.products);
     setWatchBrandName(res?.data?.products[0]?.brandname);
     setIsLoading(false);
@@ -58,7 +54,7 @@ function Home() {
   let [acBrandName, setAcBrandName] = useState();
   let accessoriesData = async () => {
     let res = await axios.get(
-      "https://eshop-spot75.herokuapp.com/users/getaccessories"
+      "https://e-shop-spot.vercel.app/users/getaccessories"
     );
     setAccessories(res.data.products);
     setAcBrandName(res?.data?.products[0]?.brandname);
@@ -75,7 +71,7 @@ function Home() {
         },
       };
       let res = await axios.post(
-        "https://eshop-spot75.herokuapp.com/users/auth",
+        "https://e-shop-spot.vercel.app/users/auth",
         { purpose: "vaildate access" },
         config
       );
